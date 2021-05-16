@@ -14,6 +14,7 @@ def grid_search(file_path, method, params, method_name, X_, y, reload=False):
         # print('Executing Grid Search to %s.' % method_name)
         model = GridSearchCV(method,
                              param_grid=params,
+                             scoring='f1',
                              cv=cv, n_jobs=12)
         model.fit(X_, y)
         pickle.dump(model, open(file_path, 'wb'))
@@ -25,6 +26,7 @@ def grid_search(file_path, method, params, method_name, X_, y, reload=False):
             print('Executing Grid Search to %s.' % method_name)
             model = GridSearchCV(method,
                                  param_grid=params,
+                                 scoring='f1',
                                  cv=cv, n_jobs=12)
             model.fit(X_, y)
             pickle.dump(model, open(file_path, 'wb'))

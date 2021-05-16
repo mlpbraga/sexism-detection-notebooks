@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 DATAFRAME_PATH = './data/labeled-comments.csv'
-TF_QUANTITY = 100
+TF_QUANTITY = 200
 
 
 def get_vocabulary(df):
@@ -235,27 +235,27 @@ class Comments:
             use_idf=False,
             norm=None,
             decode_error='replace',
-            max_features=100,
+            max_features=TF_QUANTITY,
         )
         not_sexist_vectorizer = TfidfVectorizer(
             stop_words=[],
             use_idf=False,
             decode_error='replace',
-            max_features=100,
+            max_features=TF_QUANTITY,
         )
         sexist_bigrams_vectorizer = TfidfVectorizer(
             stop_words=[],
             use_idf=False,
             ngram_range=(2, 2),
             decode_error='replace',
-            max_features=100,
+            max_features=TF_QUANTITY,
         )
         not_sexist_bigrams_vectorizer = TfidfVectorizer(
             stop_words=[],
             use_idf=False,
             ngram_range=(2, 2),
             decode_error='replace',
-            max_features=100,
+            max_features=TF_QUANTITY,
         )
 
         relevant_sexist_words = get_relevant_words(self.sexist_words)
