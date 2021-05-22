@@ -449,3 +449,5 @@ for i in tqdm(range(0, 1)):
         # print_report(report)
 
     results.append(combination_results)
+
+pickle.dump(results, open('results'), 'wb')
