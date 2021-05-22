@@ -1,0 +1,109 @@
+------------------- 0 --------------------
+SVM
+              precision    recall  f1-score   support
+           0       0.54      0.61      0.57       330
+           1       0.63      0.56      0.59       385
+LR
+              precision    recall  f1-score   support
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 1 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.56      0.60      0.58       330
+           1       0.63      0.59      0.61       385
+LR
+              precision    recall  f1-score   support
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 2 --------------------
+SVM
+              precision    recall  f1-score   support
+           0       0.56      0.59      0.58       330
+           1       0.63      0.60      0.62       385
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 3 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.56      0.60      0.58       330
+           1       0.64      0.59      0.61       385
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 4 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.56      0.60      0.58       330
+           1       0.63      0.59      0.61       385
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 5 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.56      0.60      0.58       330
+           1       0.63      0.59      0.61       385
+
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 6 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.56      0.60      0.58       330
+           1       0.64      0.59      0.61       385
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 7 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.56      0.59      0.57       330
+           1       0.63      0.61      0.62       385
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+------------------- 8 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.55      0.60      0.58       330
+           1       0.63      0.59      0.61       385
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+
+------------------- 9 --------------------
+SVM
+              precision    recall  f1-score   support
+
+           0       0.56      0.61      0.59       330
+           1       0.64      0.59      0.61       385
+LR
+              precision    recall  f1-score   support
+
+           0       0.60      0.59      0.60       330
+           1       0.65      0.66      0.66       385
+
