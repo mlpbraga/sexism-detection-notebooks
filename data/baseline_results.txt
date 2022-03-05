@@ -2,218 +2,202 @@
 SVM
               precision    recall  f1-score   support
 
-           0       0.54      0.61      0.57       330
-           1       0.63      0.56      0.59       385
+           0       0.57      0.63      0.60       335
+           1       0.63      0.58      0.60       372
 
-    accuracy                           0.58       715
-   macro avg       0.58      0.59      0.58       715
-weighted avg       0.59      0.58      0.58       715
+    accuracy                           0.60       707
+   macro avg       0.60      0.60      0.60       707
+weighted avg       0.60      0.60      0.60       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 ------------------- 1 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.56      0.60      0.58       330
-           1       0.63      0.59      0.61       385
+           0       0.57      0.65      0.60       335
+           1       0.63      0.55      0.59       372
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.60       715
-weighted avg       0.60      0.60      0.60       715
+    accuracy                           0.60       707
+   macro avg       0.60      0.60      0.60       707
+weighted avg       0.60      0.60      0.60       707
+
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 ------------------- 2 --------------------
 SVM
               precision    recall  f1-score   support
-           0       0.56      0.59      0.58       330
-           1       0.63      0.60      0.62       385
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.60       715
-weighted avg       0.60      0.60      0.60       715
+           0       0.57      0.62      0.59       335
+           1       0.63      0.59      0.61       372
+
+    accuracy                           0.60       707
+   macro avg       0.60      0.60      0.60       707
+weighted avg       0.60      0.60      0.60       707
+
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 
 ------------------- 3 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.56      0.60      0.58       330
-           1       0.64      0.59      0.61       385
+           0       0.56      0.65      0.60       335
+           1       0.63      0.54      0.58       372
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.60       715
-weighted avg       0.60      0.60      0.60       715
+    accuracy                           0.59       707
+   macro avg       0.59      0.59      0.59       707
+weighted avg       0.60      0.59      0.59       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 
 ------------------- 4 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.56      0.60      0.58       330
-           1       0.63      0.59      0.61       385
+           0       0.56      0.69      0.62       335
+           1       0.65      0.51      0.57       372
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.59       715
-weighted avg       0.60      0.60      0.60       715
+    accuracy                           0.60       707
+   macro avg       0.61      0.60      0.60       707
+weighted avg       0.61      0.60      0.60       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 
 ------------------- 5 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.56      0.60      0.58       330
-           1       0.63      0.59      0.61       385
+           0       0.57      0.63      0.60       335
+           1       0.64      0.58      0.61       372
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.59       715
-weighted avg       0.60      0.60      0.60       715
+    accuracy                           0.60       707
+   macro avg       0.61      0.61      0.60       707
+weighted avg       0.61      0.60      0.60       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
-
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 ------------------- 6 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.56      0.60      0.58       330
-           1       0.64      0.59      0.61       385
+           0       0.57      0.59      0.58       335
+           1       0.62      0.59      0.60       372
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.60       715
-weighted avg       0.60      0.60      0.60       715
+    accuracy                           0.59       707
+   macro avg       0.59      0.59      0.59       707
+weighted avg       0.59      0.59      0.59       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
-
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 ------------------- 7 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.56      0.59      0.57       330
-           1       0.63      0.61      0.62       385
+           0       0.57      0.57      0.57       335
+           1       0.61      0.61      0.61       372
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.60       715
-weighted avg       0.60      0.60      0.60       715
+    accuracy                           0.59       707
+   macro avg       0.59      0.59      0.59       707
+weighted avg       0.59      0.59      0.59       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
-
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 ------------------- 8 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.55      0.60      0.58       330
-           1       0.63      0.59      0.61       385
+           0       0.57      0.63      0.60       335
+           1       0.63      0.58      0.60       372
 
-    accuracy                           0.59       715
-   macro avg       0.59      0.59      0.59       715
-weighted avg       0.60      0.59      0.59       715
+    accuracy                           0.60       707
+   macro avg       0.60      0.60      0.60       707
+weighted avg       0.61      0.60      0.60       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
-
-
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
 ------------------- 9 --------------------
 SVM
               precision    recall  f1-score   support
 
-           0       0.56      0.61      0.59       330
-           1       0.64      0.59      0.61       385
+           0       0.56      0.69      0.62       335
+           1       0.65      0.52      0.57       372
 
-    accuracy                           0.60       715
-   macro avg       0.60      0.60      0.60       715
-weighted avg       0.60      0.60      0.60       715
+    accuracy                           0.60       707
+   macro avg       0.61      0.60      0.60       707
+weighted avg       0.61      0.60      0.60       707
 
 LR
               precision    recall  f1-score   support
 
-           0       0.60      0.59      0.60       330
-           1       0.65      0.66      0.66       385
+           0       0.60      0.66      0.63       335
+           1       0.66      0.60      0.63       372
 
-    accuracy                           0.63       715
-   macro avg       0.63      0.63      0.63       715
-weighted avg       0.63      0.63      0.63       715
+    accuracy                           0.63       707
+   macro avg       0.63      0.63      0.63       707
+weighted avg       0.63      0.63      0.63       707
