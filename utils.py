@@ -6,6 +6,8 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import precision_score, recall_score, f1_score, classification_report, confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support as score
 
+TF_QUANTITY = 100
+
 def get_vocabulary(df):
     count_vectorizer = CountVectorizer(lowercase=False, stop_words=[])
     cv_fit = count_vectorizer.fit_transform(df['content'])
