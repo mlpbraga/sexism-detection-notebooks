@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import math
+import spacy
 from tqdm.notebook import trange, tqdm
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import precision_score, recall_score, f1_score, classification_report, confusion_matrix
@@ -127,7 +128,7 @@ def generate_cross_validation_train_and_test(df):
         shared_bigrams = select_shared_terms(sexist_bigrams, not_sexist_bigrams)
         sexist_bigrams, not_sexist_bigrams = select_word_freq(shared_bigrams, sexist_bigrams, not_sexist_bigrams)
 
-        # ------ calculate and serialize term frequency to sexist and not sexist unigrams and bigrams
+        # ------ calculate and serialize term frequency to sexist and not sexist unigrams, bigrams and pos taggin
         sexist_vectorizer = TfidfVectorizer(
             stop_words=[],
             use_idf=False,
@@ -154,6 +155,34 @@ def generate_cross_validation_train_and_test(df):
             ngram_range=(2, 2),
             decode_error='replace',
             max_features=TF_QUANTITY,
+        )
+        sexist_pos_vectorizer = TfidfVectorizer(
+            tokenizer=None,
+            lowercase=False,
+            preprocessor=None,
+            ngram_range=(1, 2),
+            stop_words=None,
+            use_idf=False,
+            smooth_idf=False,
+            norm=None,
+            decode_error='replace',
+            max_features=TF_QUANTITY,
+            min_df=5,
+            max_df=0.75,
+        )
+        not_sexist_pos_vectorizer = TfidfVectorizer(
+            tokenizer=None,
+            lowercase=False,
+            preprocessor=None,
+            ngram_range=(1, 2),
+            stop_words=None,
+            use_idf=False,
+            smooth_idf=False,
+            norm=None,
+            decode_error='replace',
+            max_features=TF_QUANTITY,
+            min_df=5,
+            max_df=0.75,
         )
 
         relevant_sexist_words = get_relevant_words(sexist_unigrams)
@@ -196,16 +225,35 @@ def generate_cross_validation_train_and_test(df):
         tf_not_sexist_bigrams_dataframe = pd.concat([sexist_bigrams_tf, not_sexist_bigrams_tf]).fillna(0)
         tf_not_sexist_bigrams_dataframe.columns = [f'TFbn_{i}' for i in range(100)]
 
+        # ------ sexist pos taggin TF
+        nlp = spacy.load('pt_core_news_md')
+        sexist_pos_taggin_array = []
+        for comment in sexist_comments['content']:
+            text = nlp(comment)
+            sexist_pos_taggin_array.append(' '.join([tag.pos_ for tag in text]))
+        not_sexist_pos_taggin_array = []
+        for comment in not_sexist_comments['content']:
+            text = nlp(comment)
+            not_sexist_pos_taggin_array.append(' '.join([tag.pos_ for tag in text]))
+        sexist_pos =  pd.DataFrame(sexist_pos_vectorizer.fit_transform(pd.Series(sexist_pos_taggin_array)).toarray())
+        not_sexist_pos =  pd.DataFrame(not_sexist_pos_vectorizer.fit_transform(pd.Series(not_sexist_pos_taggin_array)).toarray())
+        pos_tagging_tf = pd.concat([sexist_pos, not_sexist_pos]).fillna(0)
+        pos_tagging_tf.columns = [f'TFpos_{i}' for i in range(100)]
+
+        # ------ define dataframe
         tf_dataframe = pd.concat([tf_sexist_dataframe,
                                   tf_not_sexist_dataframe,
                                   tf_sexist_bigrams_dataframe,
-                                  tf_not_sexist_bigrams_dataframe], axis=1)
+                                  tf_not_sexist_bigrams_dataframe,
+                                  pos_tagging_tf], axis=1)
+
 
         # ------ define quantitative features to train
         likes_df = np.array(pd.concat([sexist_comments['likes'], not_sexist_comments['likes']]).fillna(0))
         dislikes_df = np.array(pd.concat([sexist_comments['dislikes'], not_sexist_comments['dislikes']]).fillna(0))
         char_qty_df = np.array(pd.concat([sexist_comments['char-qty'], not_sexist_comments['char-qty']]).fillna(0))
         word_qty_df = np.array(pd.concat([sexist_comments['word-qty'], not_sexist_comments['word-qty']]).fillna(0))
+        ligibility_index = np.array(pd.concat([sexist_comments[''], not_sexist_comments['legibility-index']]).fillna(0))
         sexist_y = sexist_comments['avg'].apply(lambda x: 1)
         not_sexist_y = not_sexist_comments['avg'].apply(lambda x: 0)
         y_df = np.array(pd.concat([sexist_y, not_sexist_y]))
@@ -215,6 +263,7 @@ def generate_cross_validation_train_and_test(df):
         X_train['dislikes'] = dislikes_df
         X_train['char-qty'] = char_qty_df
         X_train['word-qty'] = word_qty_df
+        X_train['legibility-index'] = ligibility_index
         X_train['sexist'] = y_df
         X_train = X_train.fillna(0)
         X_train = X_train.sample(frac=1)
@@ -250,7 +299,7 @@ def generate_cross_validation_train_and_test(df):
                                       tf_not_sexist_dataframe,
                                       tf_sexist_bigrams_dataframe,
                                       tf_not_sexist_bigrams_dataframe], axis=1)
-        X_test = tf_dataframe
+        X_test = tf_test_dataframe
         X_test['likes'] = likes_df
         X_test['dislikes'] = dislikes_df
         X_test['char-qty'] = char_qty_df
